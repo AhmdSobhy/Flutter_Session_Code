@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'home.dart';
+import 'package:session4/second_screen.dart';
 
 class MyCustomForm extends StatefulWidget {
   const MyCustomForm({super.key});
@@ -47,6 +46,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)))),
               ),
+
               Container(
                   padding: const EdgeInsets.only(top: 30.0, bottom: 40.0),
                   child: ElevatedButton(
@@ -56,7 +56,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                         textStyle: const TextStyle(fontSize: 20)
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute( builder: (context) => const Home()));
+                      Navigator.push(context, MaterialPageRoute( builder: (context) => const Second()));
                     },
                     child: const Text('Submit'),
                   )),

@@ -14,19 +14,25 @@ class Home extends StatelessWidget {
             },
             icon: const Icon(Icons.arrow_back)),
       ),
-      body:  Center(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+      body:   Center(
+        child: ListView(
+            scrollDirection: Axis.vertical,
             children: const [
+              SizedBox(height: 50,),
               CircleAvatar(
+                radius: 110,
+                backgroundImage: AssetImage("assets/images/FlutterLogo.jpg",),
+              ),
+              SizedBox(height: 30,),
+              CircleAvatar(
+                radius: 117,
                 backgroundColor: Colors.blue,
-                radius: 136,
                 child: CircleAvatar(
-                  radius: 130,
-                  backgroundImage: NetworkImage('https://miro.medium.com/max/1400/0*ZQ9Xa7CINFVMA95w'),),
-              )
-        ]),
-      ),
-    );
+                  radius: 110,
+                  backgroundImage: AssetImage("assets/images/flutter3.png"),
+                ),
+              ),
+            ]),
+      ));
   }
 }
